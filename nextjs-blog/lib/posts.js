@@ -4,7 +4,7 @@ import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
 
-const postsDirectory = path.join(process.cwd(), 'pages/posts');
+const postsDirectory = path.join(process.cwd(), '/posts');
 
 export function getSortedPostsData() {
   // Get file names under /posts
@@ -99,4 +99,18 @@ export async function getPostData(id) {
 //   // Instead of the file system,
 //   // fetch post data from a database
 //   return databaseClient.query('SELECT posts...')
+// }
+
+// export async function getAllPostIds() {
+//   // Instead of the file system,
+//   // fetch post data from an external API endpoint
+//   const res = await fetch('..');
+//   const posts = await res.json();
+//   return posts.map((post) => {
+//     return {
+//       params: {
+//         id: post.id,
+//       },
+//     };
+//   });
 // }
